@@ -1,0 +1,19 @@
+page-detail {
+  .image-circle {
+    border-radius: 100px;
+    height: 200px;
+    width: 200px;
+  }
+  .scroll-content {
+    background-color: map-get($colors, light);
+  }
+
+  ion-card {
+    font-size: 50px;
+    text-align: center;
+  }
+  ion-icon,img {
+    font-size: 50px;
+  }
+
+}

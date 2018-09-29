@@ -1,0 +1,115 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>New Patient</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="form" (ngSubmit)="logForm()">
+    <ion-list>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <ion-item>
+              <ion-label floating>First name</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6>
+            <ion-item>
+              <ion-label floating>Last name</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-select required >
+          <ion-option value="male">Male</ion-option>
+          <ion-option value="female">Female</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Data of birth</ion-label>
+        <ion-datetime required  displayFormat="MM/DD/YYYY" pickerFormat="MM/DD/YYYY"></ion-datetime>
+      </ion-item>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <ion-item>
+              <ion-label floating>Height</ion-label>
+              <ion-input required  type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6>
+            <ion-item>
+              <ion-label floating>Weight</ion-label>
+              <ion-input required  type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-item>
+        <ion-label floating>Image</ion-label>
+        <ion-input required  type="file" accept="image/*" id="upload"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>NIC</ion-label>
+        <ion-input required  type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Address</ion-label>
+        <ion-textarea required  type="text"></ion-textarea>
+      </ion-item>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <ion-item>
+              <ion-label floating>Contact person name</ion-label>
+              <ion-input required  type="text"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6>
+            <ion-item>
+              <ion-label floating>Phone Number</ion-label>
+              <ion-input required  type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+            <ion-item>
+              <ion-label floating>Bed</ion-label>
+              <ion-input required  type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4>
+            <ion-item>
+              <ion-label floating>Ward</ion-label>
+              <ion-input required  type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4>
+            <ion-item>
+              <ion-label floating>Device</ion-label>
+              <ion-input required  type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button ion-button round type="submit" block [disabled]="!form.valid" >Add Patient</button>
+    </ion-list>
+  </form>
+</ion-content>
