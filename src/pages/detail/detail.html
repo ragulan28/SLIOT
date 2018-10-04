@@ -108,15 +108,32 @@
           </ion-col>
         </ion-row>
 
+
+        <ion-row justify-content-center align-items-center>
+          <h5>Hate coagulation test</h5>
+        </ion-row>
+        <ion-row justify-content-center align-items-center>
+          <img height="100" width="100" src="../../assets/imgs/add-image-png-5.png">
+        </ion-row>
+
+
       </ion-grid>
     </div>
 
     <div *ngSwitchCase="'graph'">
 
 
+      <ion-card (click)="loadGraph()">
+        <ion-card-header>
+          PPG Graph
+        </ion-card-header>
+        <ion-card-content>
+          <canvas #ppgCanvas></canvas>
+        </ion-card-content>
+      </ion-card>
       <ion-card>
         <ion-card-header (click)="loadGraph()">
-          Pulse rate
+          Temperature Graph
 
         </ion-card-header>
         <ion-card-content>
@@ -124,14 +141,6 @@
         </ion-card-content>
       </ion-card>
 
-      <ion-card (click)="loadGraph()">
-        <ion-card-header>
-          PPG
-        </ion-card-header>
-        <ion-card-content>
-          <canvas #ppgCanvas></canvas>
-        </ion-card-content>
-      </ion-card>
 
     </div>
 

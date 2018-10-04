@@ -52,21 +52,38 @@ export class DetailPage {
 
   loadGraph() {
     this.pulseRateChart = new Chart(this.pulseRate.nativeElement, {
-
-      type: 'line',
+      type: "line",
       data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: [
+          '10',
+          '',
+          '30',
+          '',
+          '50',
+          '',
+          '10',
+          '',
+          '30',
+          '',
+          '50',
+          '',
+          '10',
+          '',
+          '30',
+          '',
+          '50',
+        ],
         datasets: [
           {
-            label: "Pulse Rate Chart",
+            label: "Temperature",
             fill: false,
             lineTension: 0.1,
             backgroundColor: "rgb(133, 4, 12,0.4)",
             borderColor: "rgb(133, 4, 12)",
-            borderCapStyle: 'butt',
+            borderCapStyle: "butt",
             borderDash: [],
             borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
+            borderJoinStyle: "miter",
             pointBorderColor: "rgb(133, 4, 12,1)",
             pointBorderWidth: 1,
             pointHoverRadius: 5,
@@ -75,34 +92,67 @@ export class DetailPage {
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data: [65, 59, 80, 81, 56, 55, 40],
-            spanGaps: false,
+            data: [36,35,36,34,36,37,36,34,36,35,35,36,36,37,34,35,37],
+            spanGaps: false
           }
         ]
       },
       options: {
         scales: {
           width: 100,
+          yAxes: [
+            {
+              scaleLabel: {
+                display: true,
+                labelString: "Celsius"
+              }
+            }
+          ],
+          xAxes: [
+            {
+              scaleLabel: {
+                display: true,
+                labelString: "Time"
+              }
+            }
+          ]
         }
       }
-
     });
     this.ppgChart = new Chart(this.ppg.nativeElement, {
-
-      type: 'line',
+      type: "line",
       data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: [
+          '10',
+          '',
+          '30',
+          '',
+          '50',
+          '',
+          '10',
+          '',
+          '30',
+          '',
+          '50',
+          '',
+          '10',
+          '',
+          '30',
+          '',
+          '50',
+
+        ],
         datasets: [
           {
-            label: "PPG Chart",
+            label: "PPG",
             fill: false,
             lineTension: 0.1,
             backgroundColor: "rgba(75,192,192,0.4)",
             borderColor: "rgba(75,192,192,1)",
-            borderCapStyle: 'butt',
+            borderCapStyle: "butt",
             borderDash: [],
             borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
+            borderJoinStyle: "miter",
             // pointBorderColor: "rgba(75,192,192,1)",
             pointBorderWidth: 1,
             pointHoverRadius: 5,
@@ -111,17 +161,32 @@ export class DetailPage {
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data: [65, 59, 80, 81, 56, 55, 40],
-            spanGaps: false,
+            data: [475,471,473,470,473,471,469,466,466,468,461,466,465,449,451,455,473],
+            spanGaps: false
           }
         ]
       },
       options: {
         scales: {
           width: 100,
+          yAxes: [
+            {
+              scaleLabel: {
+                display: true,
+                labelString: "PPG"
+              }
+            }
+          ],
+          xAxes: [
+            {
+              scaleLabel: {
+                display: true,
+                labelString: "Time"
+              }
+            }
+          ]
         }
       }
-
     });
   }
 }
